@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>后台管理</title>
+    <link rel="stylesheet" type="text/css" href="css/common.css"/>
+    <link rel="stylesheet" type="text/css" href="css/main.css"/>
+    <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css"/>
+    <script type="text/javascript" src="js/libs/modernizr.min.js"></script>
+    <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="main-wrap">
+        <div class="crumb-wrap">
+            <div class="crumb-list"><i class="icon-font"></i><a href="index.html">首页</a><span class="crumb-step">&gt;</span><span class="crumb-name">作品管理</span></div>
+        </div>
+        <div style="padding-left: 100px;">
+                <h2>车辆状态维护</h2>
+            <table class="table table-bordered" style="width: 600px">
+                <tr>
+                    <td>车牌号</td>
+                    <td>
+                        <select name="carNum" id="carNum" class="required">
+                            <option value="">粤B2324D</option>
+                            <option value="19">粤B23456</option>
+                            <option value="20">粤C1324D</option>
+                        </select>
+                    </td>
+                    <td>车辆状态</td>
+                    <td>
+                        <select name="carNum" id="carNum" class="required">
+                            <option value="">空闲</option>
+                            <option value="19">出车</option>
+                            <option value="20">维修中</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="4">
+                        <input type="button" value="确定" class="btn-primary">
+                    </td>
+                </tr>
+            </table>
+        </div>
+</div>
+</body>
+</html>

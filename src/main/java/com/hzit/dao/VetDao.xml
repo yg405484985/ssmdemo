@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hzit.dao.VetDao">
+
+	<!-- 添加医生 -->
+	<insert id="saveVet" parameterType="Vet">
+		insert into
+		vet(vet_name,vet_phone)
+		values(#{vetName},#{vetPhone})
+	</insert>
+
+	<!-- 添加特长 -->
+	<insert id="saveVetSpec" parameterType="java.util.List">
+
+		<!-- vetId:表示的是最后一次添加的内容 mysql数据库提供 -->
+		<selectKey keyProperty="vetId" order="BEFORE" resultType="int">
+			select LAST_INSERT_ID()
+		</selectKey>
+
+		<!-- list:存放的是所有的 特长的ID -->
+		insert into vet_spec values
+		<foreach collection="list" item="itme" separator=",">
+			(#{vetId},#{itme})
+		</foreach>
+		<!-- in (10,20,20) (1,4),(2,1) -->
+		<!-- foreach insert into vet_spec values(1,4),(2,1) -->
+
+	</insert>
+
+	<!-- 查询 一个医生对应多个专业 查询所有的医生 -->
+	<select id="findVetList" resultMap="vetMap">
+		select
+		v.*,s.spec_name,vs.spec_id from
+		vet v LEFT JOIN vet_spec vs on
+		v.vet_id = vs.vet_id LEFT JOIN spec s
+		on vs.spec_id = s.spec_id
+
+
+	</select>
+
+	<resultMap type="Vet" id="vetMap">
+		<id property="vetId" column="vet_id" />
+		<result property="vetName" column="vet_name" />
+		<result property="vetPhone" column="vet_phone" />
+
+		<collection property="specList" ofType="Spec">
+			<id property="specId" column="spec_id" />
+			<result property="specName" column="spec_name" />
+		</collection>
+
+
+
+
+	</resultMap>
+
+
+
+
+</mapper>

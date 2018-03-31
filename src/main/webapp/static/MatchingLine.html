@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>后台管理</title>
+    <link rel="stylesheet" type="text/css" href="css/common.css"/>
+    <link rel="stylesheet" type="text/css" href="css/main.css"/>
+    <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css"/>
+
+    <script type="text/javascript" src="js/libs/modernizr.min.js"></script>
+
+</head>
+<body>
+    <div class="main-wrap">
+        <div class="crumb-wrap">
+            <div class="crumb-list"><i class="icon-font"></i><a href="index.html">首页</a><span class="crumb-step">&gt;</span><span class="crumb-name">作品管理</span></div>
+        </div>
+        <div class="result-wrap">
+               <h2>车辆与线路匹配</h2>
+                <div class="result-content">
+                  <form action="Success.html">
+                    <table class="result-tab" width="60%">
+                        <tr>
+                            <td>线路选择</td>
+                            <td>
+                                <select name="line">
+                                    <option value="1">深圳-长沙</option>
+                                    <option value="1">深圳-武汉</option>
+                                    <option value="1">广州-北京</option>
+                                </select>
+                            </td>
+
+                        </tr>
+                        <tr>
+                            <td>车辆选择</td>
+                            <td>
+                                <select name="car">
+                                    <option value="1">110</option>
+                                    <option value="1">119</option>
+                                    <option value="1">120</option>
+                                </select>
+                            </td>
+
+                        </tr>
+                        <tr>
+                            <td>发车时间</td>
+                            <td>
+                                <select name="time">
+                                    <option value="1">10:00</option>
+                                    <option value="1">12:00</option>
+                                    <option value="1">15:00</option>
+                                </select>
+                            </td>
+
+                        </tr>
+                        <tr>
+                            <td colspan="3">
+                                <input class="btn btn-primary mr10" type="submit" value="确定">
+                            </td>
+
+                        </tr>
+
+                    </table>
+                  </form>
+                </div>
+        </div>
+    </div>
+
+</body>
+</html>

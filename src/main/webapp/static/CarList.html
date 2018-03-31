@@ -1,0 +1,94 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>后台管理</title>
+    <link rel="stylesheet" type="text/css" href="css/common.css"/>
+    <link rel="stylesheet" type="text/css" href="css/main.css"/>
+    <script type="text/javascript" src="js/libs/modernizr.min.js"></script>
+</head>
+<body>
+    <div class="main-wrap">
+        <div class="crumb-wrap">
+            <div class="crumb-list"><i class="icon-font"></i><a href="index.html">首页</a><span class="crumb-step">&gt;</span><span class="crumb-name">作品管理</span></div>
+        </div>
+        <div class="search-wrap">
+            <div class="search-content">
+                <form action="#" method="post">
+                    <table class="search-tab">
+                        <tr>
+                            <td>  </td>
+                            <td>
+                                <select name="search-sort" id="selectType">
+                                    <option value="">按车牌号查询</option>
+                                    <option value="19">按运营证查询</option>
+                                    <option value="20">按购买日期查询</option>
+                                </select>
+                                <input class="common-text" placeholder="关键字" name="keywords" value=""  type="text"></td>
+                            </td>
+                            <td>
+                                <select name="search-sort" id="zt">
+                                    <option value="">按状态查询</option>
+                                    <option value="19">空闲</option>
+                                    <option value="20">出车</option>
+                                    <option value="20">维修中</option>
+                                </select>
+                            </td>
+                            <td><input class="btn btn-primary btn2" name="sub" value="查询" type="submit"></td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+        </div>
+        <div class="result-wrap">
+            <form name="myform" id="myform" method="post">
+                <div class="result-title">
+                    <div class="result-list">
+                        <a href="AddUser.html"><i class="icon-font"></i>新增作品</a>
+                        <a id="batchDel" href="javascript:void(0)"><i class="icon-font"></i>批量删除</a>
+                    </div>
+                </div>
+                <div class="result-content">
+                    <table class="result-tab" width="100%">
+                        <tr>
+                            <th>序号</th>
+                            <th>车牌号</th>
+                            <th>运营证号</th>
+                            <th>车型</th>
+                            <th>购买日期</th>
+                            <th>所属单位</th>
+                            <th>车辆状态</th>
+                            <th>查询详细</th>
+
+                        </tr>
+                        <tr>
+                            <td class="tc">1</td>
+                            <td>粤B232B3</td>
+                            <td>123456</td>
+                            <td>皮卡</td>
+                            <td>2016-12-20</td>
+                            <td>深圳配送点</td>
+                            <td>空闲</td>
+                            <td><a href="CarInfo.html">详细信息</a></td>
+                        </tr>
+                        <tr>
+                            <td class="tc">2</td>
+                            <td>粤B232C5</td>
+                            <td>123456</td>
+                            <td>皮卡</td>
+                            <td>2016-12-20</td>
+                            <td>深圳配送点</td>
+                            <td>空闲</td>
+                            <td><a href="CarInfo.html">详细信息</a></td>
+                        </tr>
+
+                    </table>
+                    <div class="list-page"> 2 条 1/1 页</div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!--/main-->
+</div>
+</body>
+</html>

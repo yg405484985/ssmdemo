@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>后台管理</title>
+    <link rel="stylesheet" type="text/css" href="css/common.css"/>
+    <link rel="stylesheet" type="text/css" href="css/main.css"/>
+    <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css"/>
+
+    <script type="text/javascript" src="js/libs/modernizr.min.js"></script>
+    <script type="text/javascript">
+        function tt()
+        {
+            if(confirm("确定要删除吗？")){
+                var f=document.forms[0];
+                f.action="Success.html";
+                f.submit();
+            }else{
+
+                return;
+            }
+
+        }
+    </script>
+</head>
+<body>
+    <div class="main-wrap">
+        <div class="crumb-wrap">
+            <div class="crumb-list"><i class="icon-font"></i><a href="index.html">首页</a><span class="crumb-step">&gt;</span><span class="crumb-name">作品管理</span></div>
+        </div>
+        <div class="result-wrap">
+               <h2>查看线路</h2>
+                <div class="result-content">
+
+                    <table class="result-tab" width="100%">
+                        <tr>
+                            <th>线路编号</th>
+                            <th>线路明细</th>
+                            <th>删除站点</th>
+
+                        </tr>
+                        <tr>
+                            <td><a href="#">A001</a></td>
+                            <td>深圳-广州-长沙</td>
+                            <td><a href="#" onClick="tt()">删除</a></td>
+
+                        </tr>
+                        <tr>
+                            <td><a href="#">A002</a></td>
+                            <td>深圳-广州-武汉</td>
+                            <td><a href="#" onClick="tt()">删除</a></td>
+
+                        </tr>
+                        <tr>
+                            <td><a href="#">A003</a></td>
+                            <td>深圳-广州-北京</td>
+                            <td><a href="#" onClick="tt()">删除</a></td>
+
+                        </tr>
+
+                    </table>
+                  <div class="list-page" > 2 条 1/1 页</div>
+                </div>
+        </div>
+    </div>
+
+</body>
+</html>

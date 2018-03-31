@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>后台管理</title>
+    <link rel="stylesheet" type="text/css" href="css/common.css"/>
+    <link rel="stylesheet" type="text/css" href="css/main.css"/>
+    <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css"/>
+
+    <script type="text/javascript" src="js/libs/modernizr.min.js"></script>
+
+</head>
+<body>
+    <div class="main-wrap">
+        <div class="crumb-wrap">
+            <div class="crumb-list"><i class="icon-font"></i><a href="index.html">首页</a><span class="crumb-step">&gt;</span><span class="crumb-name">作品管理</span></div>
+        </div>
+        <div class="result-wrap">
+            <form name="myform" id="myform" method="post">
+                <div class="result-title">
+                    <div class="result-list">
+                        <a href="AddUser.html"><i class="icon-font"></i>新增作品</a>
+                        <a id="batchDel" href="javascript:void(0)"><i class="icon-font"></i>批量删除</a>
+                    </div>
+                </div>
+                <div class="result-content">
+                    <h2>签收订单列表</h2>
+                    <table class="result-tab" width="100%">
+                        <tr>
+                            <th>序号</th>
+                            <th>订单ID</th>
+                            <th>收件地</th>
+                            <th>配送点</th>
+                            <th>收件人姓名</th>
+                            <th>寄件人姓名</th>
+                            <th>寄件人电话</th>
+
+                        </tr>
+                        <tr>
+                            <td class="tc">1</td>
+                            <td><a href="ConfirmOrderInfo.html">TY1002</a></td>
+                            <td>深圳</td>
+                            <td>深圳</td>
+                            <td>王二锤</td>
+                            <td>李三娃</td>
+                            <td>18812345678</td>
+
+                        </tr>
+                        <tr>
+                            <td class="tc">2</td>
+                            <td><a href="ConfirmOrderInfo.html">TY1002</a></td>
+                            <td>深圳</td>
+                            <td>深圳</td>
+                            <td>王二锤</td>
+                            <td>李三娃</td>
+                            <td>18812345678</td>
+
+                        </tr>
+                    </table>
+                  <div class="list-page"> 2 条 1/1 页</div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!--/main-->
+</div>
+</body>
+</html>

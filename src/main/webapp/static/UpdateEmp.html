@@ -1,0 +1,100 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>后台管理</title>
+    <link rel="stylesheet" type="text/css" href="css/common.css"/>
+    <link rel="stylesheet" type="text/css" href="css/main.css"/>
+    <script type="text/javascript" src="js/libs/modernizr.min.js"></script>
+</head>
+<body>
+<div class="container clearfix">    
+    <!--/sidebar-->
+    <div class="main-wrap">
+        <div class="crumb-wrap">
+            <div class="crumb-list"><i class="icon-font"></i><a href="/jscss/admin/design/">首页</a><span class="crumb-step">&gt;</span><a class="crumb-name" href="/jscss/admin/design/">作品管理</a><span class="crumb-step">&gt;</span><span>新增作品</span></div>
+        </div>
+        <div class="result-wrap">
+            <div class="result-content">
+                <h2>修改员工信息</h2>
+                <form action="/jscss/admin/design/add" method="post" id="myform" name="myform" enctype="multipart/form-data">
+                    <table class="insert-tab" width="100%">
+                        <tbody>
+
+                            <tr>
+                                <th><i class="require-red">*</i>编号：</th>
+                                <td>
+                                    <input class="common-text required" id="title" name="title" size="50" value="" type="text"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th><i class="require-red">*</i>姓名：</th>
+                                <td><input class="common-text" name="author" size="50" value="admin" type="text"/></td>
+                            </tr>
+                            <tr>
+                                <th width="120"><i class="require-red">*</i>性别：</th>
+                                <td>
+                                    <select name="sex" id="sex" class="required">
+                                        <option value="man">男</option>
+                                        <option value="woman">女</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th width="120"><i class="require-red">*</i>年龄：</th>
+                                <td><input class="common-text" name="author" size="50" value="admin" type="text" /></td>
+                            </tr>
+                             <tr>
+                                <th width="120"><i class="require-red">*</i>入职日期：</th>
+                                 <td><input class="common-text" name="author" size="50" value="admin" type="text" /></td>
+                            </tr>
+                            <tr>
+                                <th><i class="require-red">*</i>电话号码：</th>
+                                <td><input class="common-text" name="author" size="50" value="admin" type="text" /></td>
+                            </tr>
+                            <tr>
+                                <th><i class="require-red">*</i>职位：</th>
+                                <td><input class="common-text" name="author" size="50" value="admin" type="text" /></td>
+                            </tr>
+                            <tr>
+                                <th><i class="require-red">*</i>薪水：</th>
+                                <td><input class="common-text" name="author" size="50" value="admin" type="text" /></td>
+                            </tr>
+                            <tr>
+                                <th><i class="require-red">*</i>地址：</th>
+                                <td><input class="common-text" name="author" size="50" value="admin" type="text" /></td>
+                            </tr>
+                            <tr>
+                                <th><i class="require-red">*</i>邮箱：</th>
+                                <td><input class="common-text" name="author" size="50" value="admin" type="text" /></td>
+                            </tr>
+                            <tr>
+                                <th width="120"><i class="require-red">*</i>身份证类别：</th>
+                                <td>
+                                    <select name="typeID" id="typeID" class="required">
+                                        <option value="sfz">身份证</option>
+                                        <option value="jgz">军官证</option>
+                                        <option value="hz">护照</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th><i class="require-red">*</i>身份证号：</th>
+                                <td><input class="common-text" name="author" size="50" value="admin" type="text"/></td>
+                            </tr>
+                            <tr>
+                                <th></th>
+                                <td>
+                                    <input class="btn btn-primary btn6 mr10" value="修改" type="submit"/>
+                                </td>
+                            </tr>
+                        </tbody></table>
+                </form>
+            </div>
+        </div>
+
+    </div>
+    <!--/main-->
+</div>
+</body>
+</html>

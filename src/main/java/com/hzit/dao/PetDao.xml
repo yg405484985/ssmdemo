@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hzit.dao.PetDao">
+
+
+	<!-- 查收类型 -->
+	<select id="findPetType" resultType="PetType">
+		select type_id
+		typeId,type_name typeName from pettype
+	</select>
+
+	<select id="findPetOwner" resultType="PetOwner">
+		select petOwner_id
+		ownerId,petOwner_name ownerName,petOwner_address address,petOwner_city
+		city,petOwner_phone phone from petowner
+	</select>
+
+	<insert id="addPet" parameterType="Pet">
+		insert into
+		pet(pet_name,pet_birthdate,pet_typeId,pet_ownerId)
+		VALUES(#{petName},#{petBirthDate},#{petType.typeId},#{petOwner.ownerId})
+	</insert>
+
+
+
+	<!-- 查询所有的宠物信息 主人的信息，宠物的类型 一对一关系 -->
+	<select id="findPetList" resultMap="petMaps">
+		select
+		p.*,pt.type_name,po.petOwner_name from pet p LEFT JOIN pettype
+		pt on
+		p.pet_typeId=pt.type_id LEFT JOIN petowner po on
+		po.petOwner_id=p.pet_ownerId
+
+	</select>
+
+
+	<resultMap type="Pet" id="petMaps">
+		<!-- id和其他列 -->
+		<id property="petId" column="pet_id" />
+		<result property="petName" column="pet_name" />
+		<result property="petBirthDate" column="pet_birthdate" />
+
+		<!-- 一对第一 类型 -->
+		<association property="petType" javaType="PetType">
+			<id property="typeId" column="type_id" />
+			<result property="typeName" column="type_name" />
+		</association>
+		<!-- 一对第一 主人 -->
+		<association property="petOwner" javaType="PetOwner">
+			<id property="ownerId" column="pet_ownerId" />
+			<result property="ownerName" column="petOwner_name" />
+		</association>
+	</resultMap>
+
+
+	<!-- 批量删除 -->
+	<delete id="delPetByIds" parameterType="Object[]">
+		delete from pet
+		<where>
+			<foreach collection="array" open="pet_id in(" close=")" item="item"
+				separator=",">
+				#{item}
+			</foreach>
+		</where>
+	</delete>
+
+
+
+	<!-- 修改 -->
+	<update id="updatePetById" parameterType="Pet">
+
+		update Pet set pet_name =
+		#{petName},pet_birthdate=#{petBirthDate},pet_typeId =
+		#{petType.typeId},
+		pet_ownerId = #{petOwner.ownerId}
+		where pet_id =
+		#{petId}
+
+	</update>
+
+
+
+	<!-- 根据ID查询 -->
+	<select id="findPetById" resultMap="petMaps_byId">
+
+		select * from pet where
+		pet_id=#{petId}
+	</select>
+
+
+	<resultMap type="Pet" id="petMaps_byId">
+		<!-- id和其他列 -->
+		<id property="petId" column="pet_id" />
+		<result property="petName" column="pet_name" />
+		<result property="petBirthDate" column="pet_birthdate" />
+
+		<!-- 一对第一 类型 -->
+		<association property="petType" javaType="PetType">
+			<id property="typeId" column="pet_typeId" />
+			<result property="typeName" column="type_name" />
+		</association>
+		<!-- 一对第一 主人 -->
+		<association property="petOwner" javaType="PetOwner">
+			<id property="ownerId" column="pet_ownerId" />
+			<result property="ownerName" column="petOwner_name" />
+		</association>
+	</resultMap>
+
+
+
+
+
+
+
+
+
+
+</mapper>

@@ -1,0 +1,80 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>后台管理</title>
+    <link rel="stylesheet" type="text/css" href="css/common.css"/>
+    <link rel="stylesheet" type="text/css" href="css/main.css"/>
+    <script type="text/javascript" src="js/libs/modernizr.min.js"></script>
+</head>
+<body>
+<div class="container clearfix">    
+    <!--/sidebar-->
+    <div class="main-wrap">
+        <div class="crumb-wrap">
+            <div class="crumb-list"><i class="icon-font"></i><a href="/jscss/admin/design/">首页</a><span class="crumb-step">&gt;</span><a class="crumb-name" href="/jscss/admin/design/">作品管理</a><span class="crumb-step">&gt;</span><span>新增作品</span></div>
+        </div>
+        <div class="result-wrap">
+            <div class="result-content">
+                <form action="/jscss/admin/design/add" method="post" id="myform" name="myform" enctype="multipart/form-data">
+                    <table class="insert-tab" width="100%">
+                        <tbody>
+
+                            <tr>
+                                <th><i class="require-red">*</i>用户名：</th>
+                                <td>
+                                    <input class="common-text required" id="title" name="title" size="50" value="" type="text">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th><i class="require-red">*</i>密码：</th>
+                                <td><input class="common-text" name="author" size="50" value="admin" type="password"></td>
+                            </tr>
+                            <tr>
+                                <th width="120"><i class="require-red">*</i>权限：</th>
+                                <td>
+                                    <select name="colId" id="catid" class="required">
+                                        <option value="">配送操作员</option>
+                                        <option value="19">配送点管理员</option>
+                                        <option value="20">超级管理员</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th width="120"><i class="require-red">*</i>所在配送点：</th>
+                                <td>
+                                    <select name="colId" id="catid" class="required">
+                                        <option value="">深圳</option>
+                                        <option value="19">广州</option>
+                                        <option value="20">东莞</option>
+                                    </select>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <th width="120"><i class="require-red">*</i>配送点员工：</th>
+                                <td>
+                                    <select name="colId" id="catid" class="required">
+                                        <option value="">李毛毛</option>
+                                        <option value="19">王大哈</option>
+                                        <option value="20">李小</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th></th>
+                                <td>
+                                    <input class="btn btn-primary btn6 mr10" value="保存用户信息" type="submit">
+                                    <input class="btn btn6" onclick="history.go(-1)" value="返回" type="button">
+                                </td>
+                            </tr>
+                        </tbody></table>
+                </form>
+            </div>
+        </div>
+
+    </div>
+    <!--/main-->
+</div>
+</body>
+</html>

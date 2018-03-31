@@ -1,0 +1,82 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>后台管理</title>
+    <link rel="stylesheet" type="text/css" href="css/common.css"/>
+    <link rel="stylesheet" type="text/css" href="css/main.css"/>
+    <script type="text/javascript" src="js/libs/modernizr.min.js"></script>
+</head>
+<body>
+<div class="container clearfix">    
+    <!--/sidebar-->
+    <div class="main-wrap">
+        <div class="crumb-wrap">
+            <div class="crumb-list"><i class="icon-font"></i><a href="/jscss/admin/design/">首页</a><span class="crumb-step">&gt;</span><a class="crumb-name" href="/jscss/admin/design/">作品管理</a><span class="crumb-step">&gt;</span><span>新增作品</span></div>
+        </div>
+        <div class="result-wrap">
+            <div class="result-content">
+                <h2>新购车辆登记</h2>
+                <form action="Success.html" method="post" id="myform" name="myform" enctype="multipart/form-data">
+                    <table class="insert-tab" width="100%">
+                        <tbody>
+
+                            <tr>
+                                <th><i class="require-red">*</i>车牌号：</th>
+                                <td>
+                                    <input class="common-text required" id="title" name="title" size="50" value="" type="text"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th><i class="require-red">*</i>运营证号：</th>
+                                <td><input class="common-text" name="author" size="50" value="" type="text"/></td>
+                            </tr>
+                            <tr>
+                                <th width="120"><i class="require-red">*</i>车型：</th>
+                                <td><input class="common-text" name="author" size="50" value="" type="text"/></td>
+                            </tr>
+                            <tr>
+                                <th width="120"><i class="require-red">*</i>容积(m3)：</th>
+                                <td><input class="common-text" name="author" size="50" value="" type="text" /></td>
+                            </tr>
+                             <tr>
+                                <th width="120"><i class="require-red">*</i>吨位：</th>
+                                 <td><input class="common-text" name="author" size="50" value="" type="text" /></td>
+                            </tr>
+                            <tr>
+                                <th><i class="require-red">*</i>购买日期：</th>
+                                <td><input class="common-text" name="author" size="50" value="" type="text" /></td>
+                            </tr>
+                            <tr>
+                                <th><i class="require-red">*</i>所属单位：</th>
+                                <td>
+                                <select name="typeID" id="typeID" class="required">
+                                    <option value="all">请选择所属单位</option>
+                                    <option value="sz">深圳</option>
+                                    <option value="bj">北京</option>
+                                    <option value="sh">上海</option>
+                                </select>
+                            </td>
+                            </tr>
+                            <tr>
+                                <th>备注：</th>
+                                <td><textarea rows="4" cols="50">备注</textarea></td>
+                            </tr>
+
+                            <tr>
+                                <td></td>
+                                <td>
+                                    <input class="btn btn-primary btn6 mr10" value="提交" type="submit"/>
+                                    <input class="btn btn6"  value="重置" type="reset"/>
+                                </td>
+                            </tr>
+                        </tbody></table>
+                </form>
+            </div>
+        </div>
+
+    </div>
+    <!--/main-->
+</div>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>后台管理</title>
+    <link rel="stylesheet" type="text/css" href="css/common.css"/>
+    <link rel="stylesheet" type="text/css" href="css/main.css"/>
+    <script type="text/javascript" src="js/libs/modernizr.min.js"></script>
+</head>
+<body>
+<div class="container clearfix">    
+    <!--/sidebar-->
+    <div class="main-wrap">
+        <div class="crumb-wrap">
+            <div class="crumb-list"><i class="icon-font"></i><a href="/jscss/admin/design/">首页</a><span class="crumb-step">&gt;</span><a class="crumb-name" href="/jscss/admin/design/">作品管理</a><span class="crumb-step">&gt;</span><span>新增作品</span></div>
+        </div>
+        <div class="result-wrap">
+            <div class="result-content">
+                <h2>修改配送点</h2>
+                <form action="Success.html" method="post" id="myform" name="myform" enctype="multipart/form-data">
+                    <table class="insert-tab" width="60%">
+                        <tbody>
+
+                            <tr>
+                                <th>站点编号：</th>
+                                <td>
+                                    <input class="common-text required" id="title" name="title" size="50" value="" type="text"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>站点地址：</th>
+                                <td>
+                                    <select name="pro">
+                                         <option value="gd">广东</option>
+                                         <option value="hn">湖南</option>
+                                         <option value="hb">湖北</option>
+                                    </select>
+                                    <select name="city">
+                                        <option value="gz">广州</option>
+                                        <option value="sz">深圳</option>
+                                        <option value="hz">惠州</option>
+                                    </select>
+
+                                </td>
+                            </tr>
+                            <tr>
+                                <th width="120">站点负责人：</th>
+                                <td><input class="common-text" name="author" size="50" value="" type="text"/></td>
+                            </tr>
+                            <tr>
+                                <th width="120">联系电话：</th>
+                                <td><input class="common-text" name="author" size="50" value="" type="text" /></td>
+                            </tr>
+                             <tr>
+                                <th width="120">首工具范围(KG)：</th>
+                                 <td><input class="common-text" name="author" size="50" value="" type="text" /></td>
+                            </tr>
+                            <tr>
+                                <th>首公斤价格(￥)：</th>
+                                <td><input class="common-text" name="author" size="50" value="" type="text" /></td>
+                            </tr>
+                            <tr>
+                                <th>次公斤价格(￥)：</th>
+                                <td><input class="common-text" name="author" size="50" value="" type="text" /></td>
+                            </tr>
+
+                            <tr>
+                                <td></td>
+                                <td>
+                                    <input class="btn btn-primary btn6 mr10" value="提交" type="submit"/>
+                                    <input class="btn btn6"  value="重置" type="reset"/>
+                                </td>
+                            </tr>
+                        </tbody></table>
+                </form>
+            </div>
+        </div>
+
+    </div>
+    <!--/main-->
+</div>
+</body>
+</html>

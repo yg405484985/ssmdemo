@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>后台管理</title>
+    <link rel="stylesheet" type="text/css" href="css/common.css"/>
+    <link rel="stylesheet" type="text/css" href="css/main.css"/>
+    <script type="text/javascript" src="js/libs/modernizr.min.js"></script>
+</head>
+<body>
+<div class="container clearfix">    
+    <!--/sidebar-->
+    <div class="main-wrap">
+        <div class="crumb-wrap">
+            <div class="crumb-list"><i class="icon-font"></i><a href="/jscss/admin/design/">首页</a><span class="crumb-step">&gt;</span><a class="crumb-name" href="/jscss/admin/design/">作品管理</a><span class="crumb-step">&gt;</span><span>新增作品</span></div>
+        </div>
+        <div class="result-wrap">
+            <div class="result-content">
+                <form action="Success.html" method="post" id="myform" name="myform">
+                   <h2>配送交接单</h2>
+                    <table class="insert-tab" width="100%">
+                        <tbody>
+                            <tr>
+                                <th>交接单号</th>
+                                <td>
+                                    <input class="common-text required"  name="title" size="50" value="TY1001" type="text">
+                                </td>
+                                <th>车辆编号</th>
+                                <td>
+                                    <input class="common-text required"  name="title" size="50" value="001" type="text">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>发货时间</th>
+                                <td>
+                                    <input class="common-text required"  name="title" size="50" value="2017-3-20 16:22:22" type="text">
+                                </td>
+                                <th>交接地</th>
+                                <td>
+
+                                    <input class="common-text required"  name="title" size="50" value="北京" type="text">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>接受人签字</th>
+                                <td>
+                                    <input class="common-text required"  name="title" size="50" value="刘备" type="text">
+                                </td>
+                                <th>承运人签字</th>
+                                <td>
+                                    <input class="common-text required"  name="title" size="50" value="张飞" type="text">
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td colspan="2">
+                                    <input class="btn btn-primary btn6 mr10" value="确定" type="submit">
+                                </td>
+                                <td colspan="2">
+                                    <a href="javascript:void(0)">打印交接单</a>
+                                </td>
+                            </tr>
+                        </tbody></table>
+                </form>
+            </div>
+        </div>
+
+    </div>
+    <!--/main-->
+</div>
+</body>
+</html>

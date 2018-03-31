@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>后台管理</title>
+    <link rel="stylesheet" type="text/css" href="css/common.css"/>
+    <link rel="stylesheet" type="text/css" href="css/main.css"/>
+    <script type="text/javascript" src="js/libs/modernizr.min.js"></script>
+    <script type="text/javascript">
+        function tt()
+        {
+            if(confirm("确定要删除吗？")){
+                var f=document.forms[0];
+                f.action="delSuccess.html";
+                f.submit();
+            }else{
+
+                return;
+            }
+
+        }
+    </script>
+</head>
+<body>
+    <div class="main-wrap">
+       <h2>查看配送点</h2>
+          <div class="result-wrap">
+            <form name="myform" id="myform" method="post">
+                 <div class="result-content">
+                    <table class="result-tab" width="100%">
+                        <tr>
+                            <th>站点编号</th>
+                            <th>所在地址</th>
+                            <th>联系电话</th>
+                            <th>管理员用户名</th>
+                            <th>修改站点信息</th>
+                            <th>删除站点</th>
+                        </tr>
+                        <tr>
+                            <td><a href="#">B001</a></td>
+                            <td>广东深圳市</td>
+                            <td>18812345689</td>
+                            <td>admin</td>
+                            <td><a href="UpdatePeiSongDan.html">修改</a></td>
+                            <td><a href="#" onclick="tt()">删除</a></td>
+
+                        </tr>
+                        <tr>
+                            <td><a href="#">B002</a></td>
+                            <td>广东东莞市</td>
+                            <td>18812345688</td>
+                            <td>admin</td>
+                            <td><a href="UpdatePeiSongDan.html">修改</a></td>
+                            <td><a href="#" onclick="tt()">删除</a></td>
+
+                        </tr>
+
+                    </table>
+                    <div class="list-page"> 2 条 1/1 页</div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!--/main-->
+</div>
+</body>
+</html>
